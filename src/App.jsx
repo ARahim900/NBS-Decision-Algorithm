@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import DecisionTree from "./DecisionTree";
 
 /* ─── SVG Icons ─── */
 const AlertIcon = () => (
@@ -416,6 +417,12 @@ export default function App() {
                 </div>
               )}
             </div>
+          </div>
+
+          {/* ── DECISION TREE ── */}
+          <div className="card">
+            <SectionLabel>NBS Decision Flow</SectionLabel>
+            <DecisionTree scenario={outcome.scenario} wilayat={wilayat} />
           </div>
 
           {/* ── TRANSPORT ── */}
